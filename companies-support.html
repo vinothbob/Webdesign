@@ -1,0 +1,162 @@
+<!-- Paste into a WordPress "Custom HTML" block -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Open+Sans:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+  .cs-section {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    margin-left: -50vw;
+    box-sizing: border-box;
+    padding: 90px 6vw 100px;
+    background: transparent;
+    text-align: center;
+  }
+  .cs-head { max-width: 760px; margin: 0 auto 64px; }
+  .cs-head h2 {
+    font-family: "Poppins", Arial, sans-serif;
+    font-weight: 700;
+    font-size: clamp(34px, 4vw, 56px);
+    line-height: 1.15;
+    color: #232650;
+    margin: 0 0 22px;
+    padding: 0;
+  }
+  .cs-head p {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: clamp(16px, 1.3vw, 19px);
+    line-height: 1.7;
+    color: #4a4d6b;
+    margin: 0 auto;
+    max-width: 58ch;
+  }
+
+  /* 4 + 3 layout, last row centred */
+  .cs-grid {
+    --gap: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--gap);
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .cs-card {
+    flex: 0 0 calc((100% - 3 * var(--gap)) / 4);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-height: 112px;
+    padding: 20px 24px;
+    text-align: left;
+    background: linear-gradient(180deg, #ffffff 0%, #f5f7fa 100%);
+    border: 3px solid #33375a;
+    box-shadow: 0 0 0 0 #33375a;
+    cursor: default;
+    transition: transform .3s cubic-bezier(.2,.7,.2,1),
+                box-shadow .3s cubic-bezier(.2,.7,.2,1),
+                background .3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  .cs-card.cs-in {
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity .6s ease calc(var(--i) * 90ms),
+      transform .7s cubic-bezier(.2,.8,.2,1) calc(var(--i) * 90ms),
+      box-shadow .3s cubic-bezier(.2,.7,.2,1),
+      background .3s ease;
+  }
+  .cs-card.cs-in:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 8px 8px 0 0 #33375a;
+    background: #232650;
+    transition-delay: 0s;
+  }
+
+  .cs-mono {
+    flex: 0 0 54px;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #232650;
+    color: #fff;
+    font-family: "Poppins", Arial, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: .5px;
+    transition: background .3s ease, color .3s ease;
+  }
+  .cs-card:hover .cs-mono { background: #fff; color: #232650; }
+
+  .cs-name {
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+    font-weight: 700;
+    font-size: clamp(22px, 1.9vw, 28px);
+    line-height: 1.1;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+    color: #111827;
+    margin: 0;
+    padding: 0;
+    transition: color .3s ease;
+  }
+  .cs-card:hover .cs-name { color: #fff; }
+
+  @media (max-width: 1100px) {
+    .cs-card { flex-basis: calc((100% - 2 * var(--gap)) / 3); }
+  }
+  @media (max-width: 760px) {
+    .cs-section { padding: 60px 5vw 70px; }
+    .cs-card { flex-basis: calc((100% - var(--gap)) / 2); }
+  }
+  @media (max-width: 520px) {
+    .cs-grid { --gap: 16px; }
+    .cs-card { flex-basis: 100%; min-height: 92px; }
+    .cs-head { margin-bottom: 40px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .cs-card { opacity: 1 !important; transform: none !important; transition: none !important; }
+  }
+</style>
+
+<noscript><style>.cs-card { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+<section class="cs-section">
+  <div class="cs-head">
+    <h2>Companies we currently support.</h2>
+    
+  </div>
+
+  <div class="cs-grid">
+    <div class="cs-card" style="--i:0"><span class="cs-mono">ER</span><h3 class="cs-name">Efficace Renovation</h3></div>
+    <div class="cs-card" style="--i:1"><span class="cs-mono">DP</span><h3 class="cs-name">DDG Première</h3></div>
+    <div class="cs-card" style="--i:2"><span class="cs-mono">GB</span><h3 class="cs-name">GDA Bâtiment</h3></div>
+    <div class="cs-card" style="--i:3"><span class="cs-mono">MR</span><h3 class="cs-name">Mas Resine</h3></div>
+    <div class="cs-card" style="--i:4"><span class="cs-mono">D2</span><h3 class="cs-name">DDG 2</h3></div>
+    <div class="cs-card" style="--i:5"><span class="cs-mono">AN</span><h3 class="cs-name">ANB</h3></div>
+    <div class="cs-card" style="--i:6"><span class="cs-mono">SB</span><h3 class="cs-name">SD BAT</h3></div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var cards = document.querySelectorAll('.cs-card');
+  if (!('IntersectionObserver' in window)) {
+    cards.forEach(function (c) { c.classList.add('cs-in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('cs-in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.2 });
+  cards.forEach(function (c) { io.observe(c); });
+})();
+</script>

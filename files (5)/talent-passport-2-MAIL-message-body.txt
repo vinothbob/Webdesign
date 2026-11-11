@@ -1,0 +1,41 @@
+TALENT PASSPORT APPLICATION
+
+Name: [your-name]
+Email: [your-email]
+Phone: [your-phone]
+Nationality: [your-nationality]
+Country of residence: [your-country]
+Talent Passport category: [your-category]
+Address:
+[your-address]
+
+Notes:
+[your-message]
+
+Files received:
+Valid passport (all pages, scanned): [doc-passport]
+Previous passports (if available): [doc-prev-passports]
+Completed France long-stay visa application form: [doc-visa-form]
+Passport-size photograph (ICAO standard): [doc-photo]
+National identity card (if applicable): [doc-national-id]
+Current country residence permit (if applicable): [doc-residence-permit]
+Proof of current residential address: [doc-address-proof]
+Highest educational qualification certificate: [doc-highest-edu]
+Relevant degree / qualification certificates for your Talent Passport category: [doc-degree]
+Academic transcripts / mark sheets: [doc-transcripts]
+Updated professional CV / Resume: [doc-cv]
+Previous employment experience certificates & detailed experience letters: [doc-experience]
+Previous employment contracts (if available): [doc-contracts]
+Previous salary certificates & recent payslips: [doc-salary]
+Appointment / promotion letters (if available): [doc-appointment]
+Professional training certificates, licences / registrations: [doc-training]
+Proof of relevant professional experience (where required by the category): [doc-exp-proof]
+Marriage certificate / Birth certificate (if applicable): [doc-civil]
+Previous visa refusal letters / previous Schengen visas: [doc-prev-visas]
+Police clearance certificate (if requested): [doc-police]
+Proof of financial resources (where required by the category): [doc-financial]
+Travel medical insurance (if required): [doc-insurance]
+Accommodation details & flight itinerary in France (if requested): [doc-travel]
+
+--
+Sent from the Talent Passport form on [_site_title] ([_site_url])

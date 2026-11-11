@@ -1,0 +1,98 @@
+<div class="vf-form">
+
+<h3>Applicant details</h3>
+<div class="vf-grid">
+  <div class="vf-field"><label>Full name (as in passport) *
+  [text* your-name autocomplete:name]</label></div>
+  <div class="vf-field"><label>Email *
+  [email* your-email autocomplete:email]</label></div>
+  <div class="vf-field"><label>Phone / WhatsApp *
+  [tel* your-phone autocomplete:tel]</label></div>
+  <div class="vf-field"><label>Nationality *
+  [text* your-nationality]</label></div>
+  <div class="vf-field"><label>Current country of residence *
+  [text* your-country]</label></div>
+</div>
+<div class="vf-field"><label>Current residential address *
+  [textarea* your-address 40x3]</label></div>
+
+<h3>1. Personal documents</h3>
+<p class="vf-note">Allowed: PDF, JPG, PNG. Max 2 MB per file. Where several pages are needed, combine them into one PDF.</p>
+<div class="vf-grid">
+<div class="vf-field"><label>Valid passport (all pages, scanned) *
+  [file* doc-passport limit:2mb filetypes:pdf|jpg|jpeg|png]</label></div>
+<div class="vf-field"><label>Previous passports (if available)
+  [file doc-prev-passports limit:2mb filetypes:pdf|jpg|jpeg|png]</label></div>
+<div class="vf-field"><label>Completed France long-stay visa application form *
+  [file* doc-visa-form limit:2mb filetypes:pdf|jpg|jpeg|png]</label></div>
+<div class="vf-field"><label>Passport-size photograph (ICAO standard) *
+  <small>JPG or PNG, white background</small>
+  [file* doc-photo limit:2mb filetypes:jpg|jpeg|png]</label></div>
+<div class="vf-field"><label>National identity card (if applicable)
+  [file doc-national-id limit:2mb filetypes:pdf|jpg|jpeg|png]</label></div>
+<div class="vf-field"><label>Current country residence permit (if applicable)
+  [file doc-residence-permit limit:2mb filetypes:pdf|jpg|jpeg|png]</label></div>
+<div class="vf-field"><label>Proof of current residential address
+  [file doc-address-proof limit:2mb filetypes:pdf|jpg|jpeg|png]</label></div>
+</div>
+
+<h3>2. Educational documents</h3>
+<p class="vf-note">Allowed: PDF, JPG, PNG. Max 2 MB per file. Where several pages are needed, combine them into one PDF.</p>
+<div class="vf-grid">
+<div class="vf-field"><label>Highest educational qualification certificate *
+  [file* doc-highest-edu limit:2mb filetypes:pdf|jpg|jpeg|png]</label></div>
+<div class="vf-field"><label>Degree certificate (minimum 3 years of higher education) *
+  [file* doc-degree limit:2mb filetypes:pdf|jpg|jpeg|png]</label></div>
+<div class="vf-field"><label>Academic transcripts / mark sheets
+  [file doc-transcripts limit:2mb filetypes:pdf|jpg|jpeg|png]</label></div>
+</div>
+
+<h3>3. Professional documents</h3>
+<p class="vf-note">Allowed: PDF, JPG, PNG. Max 2 MB per file. Where several pages are needed, combine them into one PDF.</p>
+<div class="vf-grid">
+<div class="vf-field"><label>Updated professional CV / Resume *
+  [file* doc-cv limit:2mb filetypes:pdf|jpg|jpeg|png]</label></div>
+<div class="vf-field"><label>Previous employment experience certificates & detailed experience letters
+  <small>Combine into one PDF</small>
+  [file doc-experience limit:2mb filetypes:pdf|jpg|jpeg|png]</label></div>
+<div class="vf-field"><label>Previous employment contracts (if available)
+  [file doc-contracts limit:2mb filetypes:pdf|jpg|jpeg|png]</label></div>
+<div class="vf-field"><label>Previous salary certificates & recent payslips
+  <small>Combine into one PDF</small>
+  [file doc-salary limit:2mb filetypes:pdf|jpg|jpeg|png]</label></div>
+<div class="vf-field"><label>Appointment / promotion letters (if available)
+  [file doc-appointment limit:2mb filetypes:pdf|jpg|jpeg|png]</label></div>
+<div class="vf-field"><label>Professional training certificates, licences / registrations
+  <small>Combine into one PDF</small>
+  [file doc-training limit:2mb filetypes:pdf|jpg|jpeg|png]</label></div>
+<div class="vf-field"><label>Proof of relevant professional experience (if qualifying through 5 years of comparable experience)
+  [file doc-5yr-proof limit:2mb filetypes:pdf|jpg|jpeg|png]</label></div>
+</div>
+
+<h3>4. Additional documents</h3>
+<p class="vf-note">Allowed: PDF, JPG, PNG. Max 2 MB per file. Where several pages are needed, combine them into one PDF.</p>
+<div class="vf-grid">
+<div class="vf-field"><label>Marriage certificate / Birth certificate (if applicable)
+  <small>Combine into one PDF</small>
+  [file doc-civil limit:2mb filetypes:pdf|jpg|jpeg|png]</label></div>
+<div class="vf-field"><label>Previous visa refusal letters / previous Schengen visas
+  <small>Combine into one PDF</small>
+  [file doc-prev-visas limit:2mb filetypes:pdf|jpg|jpeg|png]</label></div>
+<div class="vf-field"><label>Police clearance certificate (if requested)
+  [file doc-police limit:2mb filetypes:pdf|jpg|jpeg|png]</label></div>
+<div class="vf-field"><label>Proof of personal financial resources (if requested)
+  [file doc-financial limit:2mb filetypes:pdf|jpg|jpeg|png]</label></div>
+<div class="vf-field"><label>Travel medical insurance (if required)
+  [file doc-insurance limit:2mb filetypes:pdf|jpg|jpeg|png]</label></div>
+<div class="vf-field"><label>Accommodation details & flight itinerary in France (if requested)
+  <small>Combine into one PDF</small>
+  [file doc-travel limit:2mb filetypes:pdf|jpg|jpeg|png]</label></div>
+</div>
+
+<h3>Anything else we should know?</h3>
+<div class="vf-field">[textarea your-message 40x4 placeholder "Optional notes"]</div>
+
+<div class="vf-field vf-consent">[acceptance your-consent] I agree that my personal data and documents may be processed to assess my application. I confirm the information provided is accurate.[/acceptance]</div>
+
+[submit "Submit application"]
+</div>

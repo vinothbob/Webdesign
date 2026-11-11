@@ -1,0 +1,152 @@
+<!-- Paste into a WordPress "Custom HTML" block -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+  .cmp-section{position:relative;width:100vw;left:50%;margin-left:-50vw;box-sizing:border-box;
+    padding:80px 6vw 90px;background:transparent;font-family:"Open Sans",Arial,sans-serif;color:#3a3d5c}
+  .cmp-wrap{max-width:1200px;margin:0 auto}
+  .cmp-head{text-align:center;max-width:760px;margin:0 auto 48px}
+  .cmp-head h2{font-family:"Poppins",Arial,sans-serif;font-weight:700;font-size:clamp(30px,3.6vw,48px);
+    line-height:1.15;color:#232650;margin:0 0 16px;padding:0}
+  .cmp-head p{font-size:clamp(16px,1.3vw,19px);line-height:1.7;color:#4a4d6b;margin:0}
+
+  /* ---------- Table ---------- */
+  .cmp-table{width:100%;border-collapse:separate;border-spacing:0;border:3px solid #33375a;background:#fff;
+    box-shadow:10px 10px 0 0 #33375a}
+  .cmp-table th,.cmp-table td{padding:22px 26px;text-align:left;vertical-align:top;font-size:17px;line-height:1.55}
+  .cmp-table thead th{background:#232650;color:#fff;font-family:"Poppins",Arial,sans-serif;font-weight:700;
+    font-size:clamp(18px,1.8vw,24px);border-bottom:4px solid #b8452f}
+  .cmp-table thead th:first-child{background:#f5f7fa;color:#667381;font-family:"Open Sans",Arial,sans-serif;
+    font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;border-bottom:4px solid #b8452f}
+  .cmp-table thead small{display:block;font-family:"Open Sans",Arial,sans-serif;font-weight:400;
+    font-size:14px;opacity:.8;margin-top:4px}
+  .cmp-table tbody th{width:22%;font-family:"Poppins",Arial,sans-serif;font-weight:600;font-size:16px;
+    color:#232650;background:#f5f7fa;border-right:3px solid #33375a}
+  .cmp-table tbody td{width:39%}
+  .cmp-table tbody td+td{border-left:1px solid #d5d9de}
+  .cmp-table tbody tr+tr th,.cmp-table tbody tr+tr td{border-top:1px solid #d5d9de}
+  .cmp-table tbody tr{transition:background .25s ease}
+  .cmp-table tbody tr:hover td{background:#fbf6f4}
+
+  .cmp-ok{display:inline-flex;align-items:flex-start;gap:12px}
+  .cmp-ok::before{content:"";flex:0 0 22px;width:22px;height:22px;margin-top:2px;background:#232650;
+    clip-path:polygon(14% 52%,0 66%,38% 100%,100% 22%,86% 8%,38% 70%)}
+  .cmp-var{display:inline-block;padding:4px 12px;background:#b8452f;color:#fff;font-size:12px;font-weight:600;
+    letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+  .cmp-var+br{display:none}
+  .cmp-muted{display:block;color:#667381;font-size:15px}
+
+  /* ---------- Categories ---------- */
+  .cmp-cats{margin-top:56px;padding:34px 34px 38px;border:3px solid #33375a;background:linear-gradient(180deg,#fff 0%,#f5f7fa 100%);
+    border-top:6px solid #b8452f}
+  .cmp-cats h3{font-family:"Poppins",Arial,sans-serif;font-weight:700;font-size:clamp(22px,2.2vw,28px);
+    color:#232650;margin:0 0 8px;padding:0}
+  .cmp-cats>p{margin:0 0 24px;font-size:16px;line-height:1.65}
+  .cmp-chips{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0;padding:0;list-style:none}
+  .cmp-chips li{background:#fff;border:2px solid #33375a;padding:14px 18px;font-weight:600;color:#232650;
+    font-size:16px;line-height:1.35;transition:transform .25s ease,box-shadow .25s ease,background .25s ease,color .25s ease}
+  .cmp-chips li em{display:block;font-weight:400;font-style:italic;color:#667381;font-size:14px;margin-top:2px;transition:color .25s}
+  .cmp-chips li:hover{background:#232650;color:#fff;transform:translate(-3px,-3px);box-shadow:5px 5px 0 #33375a}
+  .cmp-chips li:hover em{color:#cfd3ea}
+  .cmp-note{margin:26px 0 0;padding:16px 20px;border-left:5px solid #b8452f;background:#fff;font-size:16px;line-height:1.6}
+  .cmp-disc{text-align:center;margin:28px auto 0;max-width:760px;font-size:13.5px;color:#667381}
+
+  /* ---------- Reveal ---------- */
+  .cmp-rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+  .cmp-rv.cmp-in{opacity:1;transform:none}
+
+  /* ---------- Responsive: table becomes stacked cards ---------- */
+  @media (max-width:820px){
+    .cmp-section{padding:56px 5vw 64px}
+    .cmp-table,.cmp-table tbody,.cmp-table tr,.cmp-table th,.cmp-table td{display:block;width:100% !important;box-sizing:border-box}
+    .cmp-table{box-shadow:6px 6px 0 0 #33375a}
+    .cmp-table thead{display:none}
+    .cmp-table tbody tr{border-top:3px solid #33375a}
+    .cmp-table tbody tr:first-child{border-top:0}
+    .cmp-table tbody th{border-right:0;border-bottom:1px solid #d5d9de;padding:16px 20px}
+    .cmp-table tbody td{padding:16px 20px;border-left:0 !important}
+    .cmp-table tbody td::before{content:attr(data-label);display:block;font-family:"Poppins",Arial,sans-serif;
+      font-weight:700;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#b8452f;margin-bottom:8px}
+    .cmp-chips{grid-template-columns:repeat(2,1fr)}
+    .cmp-cats{padding:26px 20px 30px}
+  }
+  @media (max-width:480px){.cmp-chips{grid-template-columns:1fr}}
+  @media (prefers-reduced-motion:reduce){.cmp-rv{opacity:1!important;transform:none!important;transition:none!important}}
+</style>
+<noscript><style>.cmp-rv{opacity:1!important;transform:none!important}</style></noscript>
+
+<section class="cmp-section">
+  <div class="cmp-wrap">
+
+    <div class="cmp-head cmp-rv">
+      <h2>EU Blue Card vs Talent Passport</h2>
+      <p>The two programmes ask for different qualifications and documents. Here are the key differences at a glance.</p>
+    </div>
+
+    <table class="cmp-table cmp-rv">
+      <thead>
+        <tr>
+          <th scope="col">Requirement</th>
+          <th scope="col">EU Blue Card<small>Defined requirements</small></th>
+          <th scope="col">Talent Passport<small>Depends on the category</small></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Education / experience</th>
+          <td data-label="EU Blue Card"><span class="cmp-ok"><span>At least <strong>three years of higher education</strong> or <strong>five years of comparable professional experience</strong>.</span></span></td>
+          <td data-label="Talent Passport"><span class="cmp-var">Varies</span><span class="cmp-muted">Qualification and experience requirements are not identical for every category.</span></td>
+        </tr>
+        <tr>
+          <th scope="row">Employment contract</th>
+          <td data-label="EU Blue Card"><span class="cmp-ok"><span>An employment contract of <strong>at least 12 months</strong>.</span></span></td>
+          <td data-label="Talent Passport"><span class="cmp-var">Varies</span><span class="cmp-muted">Depends on the specific category.</span></td>
+        </tr>
+        <tr>
+          <th scope="row">Salary</th>
+          <td data-label="EU Blue Card"><span class="cmp-ok"><span>Salary meeting the <strong>applicable EU Blue Card threshold</strong>.</span></span></td>
+          <td data-label="Talent Passport"><span class="cmp-var">Varies</span><span class="cmp-muted">Depends on the specific category.</span></td>
+        </tr>
+        <tr>
+          <th scope="row">Qualifications</th>
+          <td data-label="EU Blue Card"><span class="cmp-ok"><span><strong>Relevant educational and professional</strong> qualifications.</span></span></td>
+          <td data-label="Talent Passport"><span class="cmp-var">Varies</span><span class="cmp-muted">Relevant to the category you apply under.</span></td>
+        </tr>
+        <tr>
+          <th scope="row">Documents required</th>
+          <td data-label="EU Blue Card"><span class="cmp-ok"><span>One defined set of applicant documents.</span></span></td>
+          <td data-label="Talent Passport"><span class="cmp-var">Varies</span><span class="cmp-muted">The documents depend on the specific Talent Passport category.</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="cmp-cats cmp-rv">
+      <h3>Talent Passport categories</h3>
+      <p>The Talent Passport covers several categories, for example:</p>
+      <ul class="cmp-chips">
+        <li>Qualified employee<em>Salarié qualifié</em></li>
+        <li>Highly qualified employee</li>
+        <li>Researcher</li>
+        <li>Company representative<em>Mandataire social</em></li>
+        <li>Innovative business project</li>
+        <li>Business investor</li>
+      </ul>
+      <p class="cmp-note">Because each category has its own rules, the qualification and experience requirements are <strong>not identical for every Talent Passport applicant</strong>.</p>
+    </div>
+
+    <p class="cmp-disc cmp-rv">This is a general guide only. Requirements can change and depend on your situation, so always confirm the current rules before applying.</p>
+
+  </div>
+</section>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.cmp-rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('cmp-in')});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){
+    if(x.isIntersecting){x.target.classList.add('cmp-in');io.unobserve(x.target);}});},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>

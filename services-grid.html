@@ -1,0 +1,91 @@
+<!-- Paste into a WordPress "Custom HTML" block (or Elementor/Divi HTML widget) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Barlow:wght@400&display=swap" rel="stylesheet">
+
+<style>
+  .svc-section {
+    background: #eef0f2;
+    padding: 32px 69px 48px;
+    box-sizing: border-box;
+  }
+  .svc-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 60px;
+    row-gap: 56px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .svc-item {
+    border-top: 3px solid #b8452f;
+    padding-top: 22px;
+  }
+  .svc-item h3 {
+    font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 1.1;
+    letter-spacing: -0.2px;
+    color: #0f1e33;
+    margin: 0 0 8px;
+    padding: 0;
+  }
+  .svc-item p {
+    font-family: "Barlow", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.7;
+    color: #667381;
+    margin: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .svc-section { padding: 28px 32px 40px; }
+    .svc-grid { grid-template-columns: repeat(2, 1fr); column-gap: 40px; }
+    .svc-item h3 { font-size: 30px; }
+    .svc-item p { font-size: 20px; }
+  }
+  @media (max-width: 640px) {
+    .svc-section { padding: 24px 20px 32px; }
+    .svc-grid { grid-template-columns: 1fr; row-gap: 36px; }
+    .svc-item h3 { font-size: 28px; }
+    .svc-item p { font-size: 18px; }
+  }
+</style>
+
+<section class="svc-section">
+  <div class="svc-grid">
+
+    <div class="svc-item">
+      <h3>Workforce supply</h3>
+      <p>Support businesses with workforce requirements by helping identify and coordinate suitable personnel.</p>
+    </div>
+
+    <div class="svc-item">
+      <h3>Personnel recruitment support</h3>
+      <p>Assist companies looking for personnel for different functions and operational requirements.</p>
+    </div>
+
+    <div class="svc-item">
+      <h3>Workforce coordination</h3>
+      <p>Coordinate requirements, availability, deployment and workforce-related communication.</p>
+    </div>
+
+    <div class="svc-item">
+      <h3>Project-based support</h3>
+      <p>Assist with temporary or project-related staffing requirements based on the specific needs of the project.</p>
+    </div>
+
+    <div class="svc-item">
+      <h3>Business staffing solutions</h3>
+      <p>Understand staffing needs and help develop practical solutions that support day-to-day operations.</p>
+    </div>
+
+    <div class="svc-item">
+      <h3>Responsive service</h3>
+      <p>Maintain efficient communication when staffing requirements are time-sensitive or changing.</p>
+    </div>
+
+  </div>
+</section>
